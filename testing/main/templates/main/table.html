@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Таблиця користувачів{% endblock %}
+{% block content %}
+    <div class="wrapper">
+        <h3>Таблиця користувачів</h3>
+
+        {% for el in table_hello %}
+        <table border="1" width="100%" cellpadding="5">
+            <colgroup>
+                <col span="2" style="background:Khaki">
+            </colgroup>
+            <tr>
+                <th>Ім'я</th>
+                <th>Прізвище</th>
+            </tr>
+            <tr>
+                <td>{{el.name}}</td>
+                <td>{{el.surname}}</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+{% endblock %}
